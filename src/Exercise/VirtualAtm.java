@@ -14,11 +14,6 @@ public class VirtualAtm {
 		this.Password = Password;
 		this.Money = Money;
 	}
-	
-	public VirtualAtm(String Name, String Password) {
-		this.Name = Name;
-		this.Password = Password;
-	}
 
 	Scanner s1 = new Scanner(System.in);
 	
@@ -57,6 +52,14 @@ public class VirtualAtm {
 		System.out.println("Input Money: ");
 		Money = s1.nextFloat();
 	}
+	
+    public void withdraw(float amount) {
+        if (Money >= amount) {
+            Money -= amount;
+            System.out.println("Withdrew: " + amount + "$");
+            System.out.println("Change: " + this.Money);
+        }
+    }
 	
 	
 }
