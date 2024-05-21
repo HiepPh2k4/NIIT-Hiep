@@ -3,61 +3,43 @@ package Exercise;
 import java.util.Scanner;
 
 public class VirtualAtm {
-	private int Id;
-	private String Name;
-	private String Password;
-	private Float Money;
+	private int id;
+	private String name;
+	private String password;
+	private Float money;
 	
-	public VirtualAtm(int Id, String Name, String Password, Float Money) {
-		this.Id = Id;
-		this.Name = Name;
-		this.Password = Password;
-		this.Money = Money;
+	public VirtualAtm(int id, String name, String password, Float money) {
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.money = money;
 	}
 
 	Scanner s1 = new Scanner(System.in);
 	
 	public int getId() {
-		return Id;
-	}
-
-	public void setId() {
-		System.out.println("Input Id: ");
-		Id = s1.nextInt();
+		return id;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
-	public void setName() {
-		System.out.println("Input Name: ");
-		Name = s1.nextLine();
-	}
 
 	public String getPassword() {
-		return Password;
-	}
-
-	public void setPassword() {
-		System.out.println("Input Password: ");
-		Password = s1.nextLine();
+		return password;
 	}
 
 	public float getMoney() {
-		return Money;
+		return money;
 	}
 
-	public void setMoney() {
-		System.out.println("Input Money: ");
-		Money = s1.nextFloat();
-	}
 	
     public void withdraw(float amount) {
-        if (Money >= amount) {
-            Money -= amount;
+        if (money >= amount) {
+            money -= amount;
             System.out.println("Withdrew: " + amount + "$");
-            System.out.println("Change: " + this.Money);
+            System.out.println("Change: " + this.money);
         }
     }
 	

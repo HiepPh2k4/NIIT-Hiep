@@ -22,10 +22,12 @@ public class Main {
 			int input = sc.nextInt();
 			switch (input) {
 			case 1:
-				System.out.println("Enter the ID of the customer: ");
+				System.out.println("Enter ID: ");
 				int id = sc.nextInt();	
+				System.out.println("Enter password: ");
+				String pw = sc.nextLine();
 				for (int i = 0; i < cus; i++) {
-					if (id == user[i].getId()) { 
+					if (id == user[i].getId() && pw == user[i].getPassword()) { 
 						try {
 							Scanner s = new Scanner(System.in);
 							System.out.println("Input the amount of Money: ");
