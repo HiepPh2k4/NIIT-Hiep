@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import models.Student;
 
 public class Main {
 
@@ -9,7 +7,6 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter ID: ");
 		String id = scanner.nextLine();
-		ArrayList<Student> stu = new ArrayList<>();
 		while (management.studentInf(id) != null) {
 			System.out.println("Login successful!!!");
 			while (true) {
@@ -32,23 +29,23 @@ public class Main {
 				case 2:
 					System.out.println("the student with highest GPA: ");
 					System.out.println("ID: " + management.maxMark().getId());
-					System.out.println("Name: "+ management.maxMark().getName());
-					System.out.println("Age: "+ management.maxMark().getAge());
-					System.out.println("Gpa: "+ management.maxMark().getMark());
+					System.out.println("Name: " + management.maxMark().getName());
+					System.out.println("Age: " + management.maxMark().getAge());
+					System.out.println("Gpa: " + management.maxMark().getMark());
 					break;
 				case 3:
 					System.out.println("the student with lowest GPA: ");
 					System.out.println("ID: " + management.minMark().getId());
-					System.out.println("Name: "+ management.minMark().getName());
-					System.out.println("Age: "+ management.minMark().getAge());
-					System.out.println("Gpa: "+ management.minMark().getMark());
+					System.out.println("Name: " + management.minMark().getName());
+					System.out.println("Age: " + management.minMark().getAge());
+					System.out.println("Gpa: " + management.minMark().getMark());
 					break;
 				case 4:
 					System.out.println("the oldest student: ");
 					System.out.println("ID: " + management.maxAge().getId());
-					System.out.println("Name: "+ management.maxAge().getName());
-					System.out.println("Age: "+ management.maxAge().getAge());
-					System.out.println("Gpa: "+ management.maxAge().getMark());
+					System.out.println("Name: " + management.maxAge().getName());
+					System.out.println("Age: " + management.maxAge().getAge());
+					System.out.println("Gpa: " + management.maxAge().getMark());
 					break;
 				case 5:
 					System.out.println("Au revoir!");
