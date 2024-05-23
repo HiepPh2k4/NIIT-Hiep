@@ -31,9 +31,6 @@ public class Management {
 	}
 	
 	public Student maxMark() {
-		if (students.isEmpty()) {
-			return null;
-		}
 		Student maxMark = students.get(0);
 		for (Student student : students) {
 			if (student.getMark() > maxMark.getMark()) {
@@ -44,9 +41,6 @@ public class Management {
 	}
 	
 	public Student minMark() {
-		if (students.isEmpty()) {
-			return null;
-		}
 		Student minMark = students.get(0);
 		for (Student student : students) {
 			if (student.getMark() < minMark.getMark()) {
@@ -57,9 +51,6 @@ public class Management {
 	}
 
 	public Student maxAge() {
-		if (students.isEmpty()) {
-			return null;
-		}
 		Student maxAge = students.get(0);
 		for (Student student : students) {
 			if (student.getAge() > maxAge.getAge()) {
